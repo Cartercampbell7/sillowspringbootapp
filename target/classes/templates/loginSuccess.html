@@ -1,0 +1,11 @@
+<!-- Post-Login Page (Will only be shown if successfully make it through login) -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+	<div layout:fragment="content">
+		<hr/>
+		<h4>Successfully logged in as </h4>
+		<p th:text="${loginModel.username}"></p>
+		<p th:text="${loginModel.password}"></p>
+		<hr/>
+	</div>
+</html>

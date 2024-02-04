@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+	<div layout:fragment="content">
+        <br>
+        <br/>
+		<h4 style="font-family:'Times New Roman', Times, serif;">You have successfully registered!</h4>
+        <hr/>
+        <br/>
+        <h5 align="left" style="font-family:'Times New Roman', Times, serif;">Your Username:</h5>
+        <hr/>
+		<p align="left" th:text="${loginModel.username}"></p>
+        <br>
+        <h5 align="left" style="font-family:'Times New Roman', Times, serif;">Your Password:</h5>
+        <hr/>
+        <p align="left" th:text="${loginModel.password}"></p>
+	</div>
+</html>

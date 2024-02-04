@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+  <head>
+    <style>
+      * {
+        font-family: 'Times New Roman', Times, serif;
+      }
+      h2 {
+        color: blue;
+      }
+      p {
+        font-style: italic;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 2px;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+      }
+    </style>
+    <title>Sillow | Properties</title>
+  </head>
+  <body>
+    <div layout:fragment="content">
+    <br/>
+    <h1 align="center" th:text="${title}"></h1>
+    <hr/>
+    <br>
+    <table align="center" style="width:100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Location</th>
+        <th>Sq. Feet</th>
+        <th>Description</th>
+        <th>Value</th>
+        <th>Date of Const.</th>
+        <th>Action</th>
+      </tr>
+      <tr th:each="property : ${resultProperties}">
+        <td th:text="${property.nameOfProperty}"></td>
+        <td th:text="${property.location}"></td>
+        <td th:text="${property.squareFeet}"></td>
+        <td th:text="${property.description}"></td>
+        <td th:text="${property.value}"></td>
+        <td th:text="${property.dateOfConstruction}"></td>
+      </tr>
+    </table>
+  </div>
+  </body>
+</html>

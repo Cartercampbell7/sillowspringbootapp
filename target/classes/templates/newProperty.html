@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sillow | New Property</title>
+    </head>
+    <body>
+        <h1>New Property</h1>
+        <form class="form" action="#" th:action="@{processNew}" th:object="${property}" method="post">
+            <table>
+                <tr>
+                    <td>Name of Property:</td>
+                    <td><input type="text" th:field="*{nameOfProperty}"/></td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td><input type="text" th:field="*{location}"/></td>
+                </tr>
+                <tr>
+                    <td>Square Feet:</td>
+                    <td><input type="text" th:field="*{squareFeet}"/></td>
+                </tr>
+                <tr>
+                    <td>Photo File Name:</td>
+                    <td><input type="text" th:field="*{photoFileName}"/></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><input type="text" th:field="*{description}"/></td>
+                </tr>
+                <tr>
+                    <td>Value:</td>
+                    <td><input type="text" th:field="*{value}"/></td>
+                </tr>
+                <tr>
+                    <td>Date of Construction:</td>
+                    <td><input type="text" th:field="*{dateOfConstruction}"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Save"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

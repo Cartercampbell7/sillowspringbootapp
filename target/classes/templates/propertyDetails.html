@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+<head>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h2 {
+            color: blue;
+        }
+        p {
+            font-style: italic;
+        }
+    </style>
+    <title>Sillow | Property Details</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h1 align="center" th:text="${property.nameOfProperty}"></h1>
+    <hr/>
+    <br>
+    <table align="center" style="width:50%">
+        <tr>
+            <td><b>Location:</b></td>
+            <td th:text="${property.location}"></td>
+        </tr>
+        <tr>
+            <td><b>Sq. Feet:</b></td>
+            <td th:text="${property.squareFeet}"></td>
+        </tr>
+        <tr>
+            <td><b>Description:</b></td>
+            <td th:text="${property.description}"></td>
+        </tr>
+        <tr>
+            <td><b>Value:</b></td>
+            <td th:text="${property.value}"></td>
+        </tr>
+        <tr>
+            <td><b>Date of Const.:</b></td>
+            <td th:text="${property.dateOfConstruction}"></td>
+        </tr>
+    </table>
+    <br/>
+    <p align="center"><a th:href="@{/orders/}">Back to Properties</a></p>
+    <hr/>
+    <br/>
+</div>
+</body>
+</html>
